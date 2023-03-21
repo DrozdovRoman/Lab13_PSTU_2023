@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCollection", "MyCollectio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLib", "..\lab_11\MyLib\MyLib.csproj", "{656486B6-8968-46DE-9870-A4D7221AF6C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNewCollection", "MyNewCollection\MyNewCollection.csproj", "{4B79DE82-C8A1-4765-B4F3-DC222CE7E40B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{656486B6-8968-46DE-9870-A4D7221AF6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{656486B6-8968-46DE-9870-A4D7221AF6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{656486B6-8968-46DE-9870-A4D7221AF6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B79DE82-C8A1-4765-B4F3-DC222CE7E40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B79DE82-C8A1-4765-B4F3-DC222CE7E40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B79DE82-C8A1-4765-B4F3-DC222CE7E40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B79DE82-C8A1-4765-B4F3-DC222CE7E40B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

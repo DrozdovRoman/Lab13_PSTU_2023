@@ -76,7 +76,7 @@ namespace MyCollection
         {
             if (index < 0 || index >= Count)
             {
-                throw new ArgumentException("Некорректный индекс.");
+                throw new ArgumentException(nameof(index));
             }
             Node<T> current = Find(index);
             Node <T> newNode = new Node<T>(data,null,null);
@@ -225,7 +225,7 @@ namespace MyCollection
             int index = 0;
             foreach (var value in this)
             {
-                array[index + arrayIndex] = value;
+                array[index + arrayIndex] = (T)value.Clone();
                 ++index;
             }
         }
