@@ -10,6 +10,19 @@ namespace MyCollection
         protected Node<T> tail = null;
         public int Count { get; protected set; }
         public bool IsReadOnly { get => false; }
+        
+        public MyCollection()
+        {
+            Count = 0;
+        }
+        
+        public MyCollection(IEnumerable<T> objects)
+        {
+            foreach(T elem in objects)
+            {
+                Add((T)elem.Clone());
+            }
+        }
         public bool Remove(T data)
         {
             bool flag = false;
@@ -42,19 +55,6 @@ namespace MyCollection
                 --Count;
             }
             return flag;
-        }
-
-        public MyCollection()
-        {
-            Count = 0;
-        }
-
-        public MyCollection(IEnumerable<T> objects)
-        {
-            foreach(T elem in objects)
-            {
-                Add((T)elem.Clone());
-            }
         }
 
         public int IndexOf(T data)
@@ -96,7 +96,7 @@ namespace MyCollection
             ++Count;
         }
 
-        public void RemoveAt(int index)
+        public virtual void RemoveAt(int index)
         {
             if (Count > 0)
             {
