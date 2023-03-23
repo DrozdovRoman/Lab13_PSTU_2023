@@ -3,7 +3,7 @@ using MyCollection;
 
 namespace MyNewCollection
 {
-    public class MyNewCollection<T>: MyCollection<T> where T: ICloneable
+    public class MyNewCollection<T>: MyCollection<T> where T : ICloneable
     {
         public delegate void CollectionHandler(object source, CollectionHandlerEventArgs<T> args);
         public event CollectionHandler CollectionCountChanged;
@@ -44,12 +44,12 @@ namespace MyNewCollection
             }
         }
 
-        protected virtual void OnCollectionReferenceChanged(object source, CollectionHandlerEventArgs<T> args)
+        public void OnCollectionReferenceChanged(object source, CollectionHandlerEventArgs<T> args)
         {
             CollectionReferenceChanged?.Invoke(source, args);
         }
 
-        protected virtual void OnCollectionCountChanged(object source, CollectionHandlerEventArgs<T> args)
+        public void OnCollectionCountChanged(object source, CollectionHandlerEventArgs<T> args)
         {
             CollectionCountChanged?.Invoke(source, args);
         }

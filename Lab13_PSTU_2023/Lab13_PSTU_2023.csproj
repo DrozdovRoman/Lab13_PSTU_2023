@@ -6,7 +6,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\lab_11\MyLib\MyLib.csproj" />
       <ProjectReference Include="..\MyCollection\MyCollection.csproj" />
+      <ProjectReference Include="..\MyNewCollection\MyNewCollection.csproj" />
     </ItemGroup>
 
     <ItemGroup>

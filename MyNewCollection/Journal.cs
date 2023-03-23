@@ -16,20 +16,20 @@ namespace MyNewCollection
         }
         public override string ToString()
         {
-            return $"| Коллекция: {CollectionName} | Изменение: {ChangeType} | Объект: {ObjectInfo} |";
+            return $"| Коллекция: {CollectionName} |\n| Изменение: {ChangeType} |\nОбъект: {ObjectInfo}";
         }
     }
     
     public class Journal<T>
     {
-        private List<JournalEntry> journalOfChange;
+        public List<JournalEntry> journalOfChange;
 
         public Journal()
         {
             journalOfChange = new List<JournalEntry>();
         }
         
-        public void CollectionCountChanged(object sourse, CollectionHandlerEventArgs<T> e)
+        public void CollectionCountChanged(object source, CollectionHandlerEventArgs<T> e)
         {
 
             JournalEntry je = new JournalEntry(e.CollectionName, e.ActionType, e.Reference.ToString());
@@ -38,7 +38,7 @@ namespace MyNewCollection
             
         }
         
-        public void CollectionReferenceChanged(object sourse, CollectionHandlerEventArgs<T> e)
+        public void CollectionReferenceChanged(object source, CollectionHandlerEventArgs<T> e)
         {
 
             JournalEntry je = new JournalEntry(e.CollectionName, e.ActionType, e.Reference.ToString());
